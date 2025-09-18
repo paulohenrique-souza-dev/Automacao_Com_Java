@@ -16,24 +16,20 @@ git clone https://github.com/paulohenrique-souza-dev/Automacao_Com_Java.git
 
 Com isso já deve clonar os arquivos em seu ide.
 
+
 ## 2. Abrir o projeto
-
 Entre na pasta AppAutomacao e abra no IntelliJ IDEA:
-
 cd Automacao_Com_Java/AppAutomacao
-
 No IntelliJ, escolha File > Open e selecione essa pasta.
 
+
 ## 3. Compilar e rodar
-
 Localize a classe que contém o método:
-
 public static void main(String[] args)
 
 Clique em Run ▶️ dentro do IntelliJ.
 
 O projeto será compilado e executado automaticamente.
-
 lembrando que para ter lógica é necessário a fonte de dados,eu usei um dashboard onde vou disponiblizar o código aqui no git.
 Porém fica a critério,pode desenvolver e consumir dados com base em seus interresses.
 
