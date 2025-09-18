@@ -1,0 +1,8 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+.idea_backup/
+
+# Pastas de build
+out/
+target/
