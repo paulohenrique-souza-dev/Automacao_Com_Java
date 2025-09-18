@@ -1,5 +1,8 @@
 package com.app;
 
+
+//Importando as bibliotecas
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
@@ -24,7 +27,7 @@ public class AppStatus {
 
     public static void main(String[] args) {
 
-        // ---- Interface Swing ----
+        // -- Interface Swing 
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("App Status");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,7 +47,7 @@ public class AppStatus {
             enviarStatusFlask("ONLINE");
         });
 
-        // ---- Heartbeat ----
+    
         new Thread(() -> {
             while (true) {
                 try {
@@ -73,7 +76,7 @@ public class AppStatus {
                         atualizarLabel("ONLINE");
                         removerCSVProcessado();
                     }
-                    Thread.sleep(2000); // verifica a cada 2 segundos
+                    Thread.sleep(2000); // verifica a cada 2 segundos serve como o time sleep em py.
                 } catch (Exception e) {
                     e.printStackTrace();
                     atualizarLabel("OFFLINE");
@@ -86,7 +89,7 @@ public class AppStatus {
     private static void atualizarLabel(String status) {
         SwingUtilities.invokeLater(() -> statusLabel.setText(status));
     }
-
+    //metodo que envia status a api em tempo real
     private static void enviarStatusFlask(String status) {
         try {
             URL url = new URL("http://127.0.0.1:5000/api/update_status");
@@ -139,6 +142,8 @@ public class AppStatus {
             e.printStackTrace();
         }
     }
+
+    //script de automação usando o selenium
 
     private static void executarAutomacao(File csvFile) {
         try {
